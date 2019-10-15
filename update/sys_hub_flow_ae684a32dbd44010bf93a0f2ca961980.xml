@@ -1,0 +1,2839 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Create a flow for Expense Approval flow</description>
+        <internal_name>expanse_approval</internal_name>
+        <label_cache>[{"name":"Updated_1.current.auditor","label":"Trigger➛Expense report Record➛Auditor","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_287611_expense_report","column_name":"auditor"},{"name":"fc8bf41d-c773-403e-9a08-1635f5b00d1f.table_name","label":"3.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"fc8bf41d-c773-403e-9a08-1635f5b00d1f.record","label":"3.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"23a68423-1282-49e1-86d0-bc2f47187402.table_name","label":"2.1➛Expense report Table","reference":"x_287611_expense_report","reference_display":"Expense report","type":"table_name","base_type":"table_name"},{"name":"23a68423-1282-49e1-86d0-bc2f47187402.record","label":"2.1➛Expense report Record","reference":"x_287611_expense_report","reference_display":"Expense report","type":"reference","base_type":"reference"},{"name":"Updated_1.current.opened_by.manager","label":"Trigger➛Expense report Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Updated_1.current","label":"Trigger➛Expense report Record","reference":"x_287611_expense_report","reference_display":"Expense report","type":"reference","base_type":"reference"},{"name":"466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice"}]</label_cache>
+        <latest_snapshot>ce3dc27adbd44010bf93a0f2ca961929</latest_snapshot>
+        <master_snapshot>ce3dc27adbd44010bf93a0f2ca961929</master_snapshot>
+        <name>Expense Approval</name>
+        <outputs/>
+        <remote_trigger_id>1a3dc27adbd44010bf93a0f2ca96198e</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:13:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ae684a32dbd44010bf93a0f2ca961980</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Expense Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_hub_flow_ae684a32dbd44010bf93a0f2ca961980</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae684a32dbd44010bf93a0f2ca961980"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ae684a32dbd44010bf93a0f2ca961980"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_287611_expense_report">stateCHANGESTO2<item display_value="Approval" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="2"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1a3dc27adbd44010bf93a0f2ca96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:28</sys_updated_on>
+        <table>x_287611_expense_report</table>
+    </sys_flow_record_trigger>
+    <sys_hub_flow_component action="delete_multiple" query="flow=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN0f2d427adbd44010bf93a0f2ca9619f8,472d427adbd44010bf93a0f2ca9619f6,4f2d427adbd44010bf93a0f2ca9619e7,4f2d427adbd44010bf93a0f2ca9619f1,c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">472d427adbd44010bf93a0f2ca9619f8</block>
+        <comment/>
+        <connected_to>b0c9f176-1074-4ae2-a68c-f3b1f410787c</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619f8</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0f2d427adbd44010bf93a0f2ca9619f8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>3.1</order>
+        <parent_ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>472d427adbd44010bf93a0f2ca9619f6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>fc8bf41d-c773-403e-9a08-1635f5b00d1f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=472d427adbd44010bf93a0f2ca9619f6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>432d427adbd44010bf93a0f2ca9619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1fd27c8cc3c632002841b63b12d3aeb9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">e7d270ccc3c632002841b63b12d3ae8b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>bd3d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=472d427adbd44010bf93a0f2ca9619f6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4b2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>793d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4f2d427adbd44010bf93a0f2ca9619e7</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4f2d427adbd44010bf93a0f2ca9619e7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>072d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value/>
+        <variable display_value="">26d2a9920b10030085c083eb37673ad9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>313d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>432d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">22d2a9920b10030085c083eb37673ac3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>7d3d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">1ed2a9920b10030085c083eb37673ab7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">d2d2a9920b10030085c083eb37673aa0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value/>
+        <variable display_value="">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4f2d427adbd44010bf93a0f2ca9619e7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>393d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 21:07:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]&amp;AnyU[{{Updated_1.current.auditor}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4b2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>3d3d827adbd44010bf93a0f2ca9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>753d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>032d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>fd3d827adbd44010bf93a0f2ca9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b13d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c32d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">032d427adbd44010bf93a0f2ca9619f1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4f2d427adbd44010bf93a0f2ca9619f1</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4f2d427adbd44010bf93a0f2ca9619f1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619f1</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>072d427adbd44010bf93a0f2ca9619f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>{{466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state}}=approved</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619f1</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 21:13:04</sys_created_on>
+        <sys_id>7b065672db184010bf93a0f2ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 21:13:04</sys_updated_on>
+        <value> Manager's approval </value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>2.1</order>
+        <parent_ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ee</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>23a68423-1282-49e1-86d0-bc2f47187402</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8b2d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1fd27c8cc3c632002841b63b12d3aeb9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>bd3d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">e7d270ccc3c632002841b63b12d3ae8b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>832d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>cf2d427adbd44010bf93a0f2ca9619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>472d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>793d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN8f2d427adbd44010bf93a0f2ca9619e2"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8f2d427adbd44010bf93a0f2ca9619e2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8f2d427adbd44010bf93a0f2ca9619e2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8f2d427adbd44010bf93a0f2ca9619e2</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>432d427adbd44010bf93a0f2ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>always</value>
+        <variable display_value="">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8f2d427adbd44010bf93a0f2ca9619e2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4b2d427adbd44010bf93a0f2ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>stateCHANGESTO2</value>
+        <variable display_value="">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT INee684a32dbd44010bf93a0f2ca961982"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ae684a32dbd44010bf93a0f2ca961980</id>
+        <name>Expanse Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:13:27</sys_created_on>
+        <sys_id>ee684a32dbd44010bf93a0f2ca961982</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:13:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN322d8276dbd44010bf93a0f2ca96193d,872d427adbd44010bf93a0f2ca9619dc"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</model>
+        <model_id>ae684a32dbd44010bf93a0f2ca961980</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>322d8276dbd44010bf93a0f2ca96193d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</model>
+        <model_id>ae684a32dbd44010bf93a0f2ca961980</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619dc</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN472d427adbd44010bf93a0f2ca9619f6,4f2d427adbd44010bf93a0f2ca9619e7,c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>3.1</order>
+        <parent_ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>472d427adbd44010bf93a0f2ca9619f6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>fc8bf41d-c773-403e-9a08-1635f5b00d1f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=472d427adbd44010bf93a0f2ca9619f6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>432d427adbd44010bf93a0f2ca9619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1fd27c8cc3c632002841b63b12d3aeb9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">e7d270ccc3c632002841b63b12d3ae8b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>bd3d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>472d427adbd44010bf93a0f2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=472d427adbd44010bf93a0f2ca9619f6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4b2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>472d427adbd44010bf93a0f2ca9619f6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>793d827adbd44010bf93a0f2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4f2d427adbd44010bf93a0f2ca9619e7</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4f2d427adbd44010bf93a0f2ca9619e7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>072d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value/>
+        <variable display_value="">26d2a9920b10030085c083eb37673ad9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>313d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>432d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">22d2a9920b10030085c083eb37673ac3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>7d3d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">1ed2a9920b10030085c083eb37673ab7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">d2d2a9920b10030085c083eb37673aa0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619e7</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value/>
+        <variable display_value="">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4f2d427adbd44010bf93a0f2ca9619e7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>393d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 21:07:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]&amp;AnyU[{{Updated_1.current.auditor}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4b2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>3d3d827adbd44010bf93a0f2ca9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>753d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>032d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>fd3d827adbd44010bf93a0f2ca9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b13d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c32d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bae0a1120b10030085c083eb37673a92</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4f2d427adbd44010bf93a0f2ca9619e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <order>2.1</order>
+        <parent_ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619ee</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>23a68423-1282-49e1-86d0-bc2f47187402</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8b2d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1fd27c8cc3c632002841b63b12d3aeb9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>bd3d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>c72d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">e7d270ccc3c632002841b63b12d3ae8b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c72d427adbd44010bf93a0f2ca9619ee</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f93d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c72d427adbd44010bf93a0f2ca9619ee"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>832d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>b53d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>cf2d427adbd44010bf93a0f2ca9619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>f13d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>472d427adbd44010bf93a0f2ca9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>c72d427adbd44010bf93a0f2ca9619ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:26</sys_created_on>
+        <sys_id>793d827adbd44010bf93a0f2ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN0f2d427adbd44010bf93a0f2ca9619f8,4f2d427adbd44010bf93a0f2ca9619f1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">472d427adbd44010bf93a0f2ca9619f8</block>
+        <comment/>
+        <connected_to>b0c9f176-1074-4ae2-a68c-f3b1f410787c</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>0f2d427adbd44010bf93a0f2ca9619f8</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0f2d427adbd44010bf93a0f2ca9619f8"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">032d427adbd44010bf93a0f2ca9619f1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>4f2d427adbd44010bf93a0f2ca9619f1</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:50</sys_updated_on>
+        <ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4f2d427adbd44010bf93a0f2ca9619f1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619f1</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>072d427adbd44010bf93a0f2ca9619f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <value>{{466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state}}=approved</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f2d427adbd44010bf93a0f2ca9619f1</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 21:13:04</sys_created_on>
+        <sys_id>7b065672db184010bf93a0f2ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 21:13:04</sys_updated_on>
+        <value> Manager's approval </value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN872d427adbd44010bf93a0f2ca9619db,8f2d427adbd44010bf93a0f2ca9619e0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>872d427adbd44010bf93a0f2ca9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:14</sys_created_on>
+        <sys_id>8f2d427adbd44010bf93a0f2ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ae684a32dbd44010bf93a0f2ca961980_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=ae684a32dbd44010bf93a0f2ca961980^sys_idNOT IN163dc27adbd44010bf93a0f2ca96198f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"163dc27adbd44010bf93a0f2ca96198f","name":"plan"}}</plan>
+        <plan_id>ae684a32dbd44010bf93a0f2ca961980</plan_id>
+        <snapshot>ce3dc27adbd44010bf93a0f2ca961929</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>163dc27adbd44010bf93a0f2ca96198f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:49</sys_updated_on>
+        <trigger display_value="">1a3dc27adbd44010bf93a0f2ca96198e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Create a flow for Expense Approval flow</description>
+        <internal_name>expanse_approval</internal_name>
+        <label_cache>[{"name":"fc8bf41d-c773-403e-9a08-1635f5b00d1f.table_name","label":"3.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"fc8bf41d-c773-403e-9a08-1635f5b00d1f.record","label":"3.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"23a68423-1282-49e1-86d0-bc2f47187402.table_name","label":"2.1➛Expense report Table","reference":"x_287611_expense_report","reference_display":"Expense report","type":"table_name","base_type":"table_name"},{"name":"23a68423-1282-49e1-86d0-bc2f47187402.record","label":"2.1➛Expense report Record","reference":"x_287611_expense_report","reference_display":"Expense report","type":"reference","base_type":"reference"},{"name":"Updated_1.current.opened_by.manager","label":"Trigger➛Expense report Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Updated_1.current","label":"Trigger➛Expense report Record","reference":"x_287611_expense_report","reference_display":"Expense report","type":"reference","base_type":"reference"},{"name":"466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice"}]</label_cache>
+        <master>true</master>
+        <name>Expense Approval</name>
+        <outputs/>
+        <parent_flow display_value="Expense Approval">ae684a32dbd44010bf93a0f2ca961980</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce3dc27adbd44010bf93a0f2ca961929</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=ce3dc27adbd44010bf93a0f2ca961929"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ce3dc27adbd44010bf93a0f2ca961929"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN063dc27adbd44010bf93a0f2ca961959,523dc27adbd44010bf93a0f2ca961965,5a3dc27adbd44010bf93a0f2ca96195f,da3dc27adbd44010bf93a0f2ca96195b,da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">032d427adbd44010bf93a0f2ca9619f1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>063dc27adbd44010bf93a0f2ca961959</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=063dc27adbd44010bf93a0f2ca961959"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>063dc27adbd44010bf93a0f2ca961959</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 21:13:17</sys_created_on>
+        <sys_id>cb169672db184010bf93a0f2ca9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 21:13:17</sys_updated_on>
+        <value> Manager's approval </value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>063dc27adbd44010bf93a0f2ca961959</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca96195a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>{{466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state}}=approved</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>2.1</order>
+        <parent_ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>523dc27adbd44010bf93a0f2ca961965</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>23a68423-1282-49e1-86d0-bc2f47187402</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=523dc27adbd44010bf93a0f2ca961965"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>523dc27adbd44010bf93a0f2ca961965</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5e3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>523dc27adbd44010bf93a0f2ca961965</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>9a3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=523dc27adbd44010bf93a0f2ca961965"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>563dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>923dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1a3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5a3dc27adbd44010bf93a0f2ca96195f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5a3dc27adbd44010bf93a0f2ca96195f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>163dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>523dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>9a3dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d63dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value/>
+        <variable display_value="">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5a3dc27adbd44010bf93a0f2ca96195f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1e3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 21:07:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]&amp;AnyU[{{Updated_1.current.auditor}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>123dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5a3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d23dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>963dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">472d427adbd44010bf93a0f2ca9619f8</block>
+        <comment/>
+        <connected_to>b0c9f176-1074-4ae2-a68c-f3b1f410787c</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>da3dc27adbd44010bf93a0f2ca96195b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=da3dc27adbd44010bf93a0f2ca96195b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>3.1</order>
+        <parent_ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>da3dc27adbd44010bf93a0f2ca961968</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>fc8bf41d-c773-403e-9a08-1635f5b00d1f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca961968</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>163dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca961968</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d63dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1e3dc27adbd44010bf93a0f2ca961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>923dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT INda3dc27adbd44010bf93a0f2ca96196a"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>da3dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:49</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=da3dc27adbd44010bf93a0f2ca96196a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca96196a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>123dc27adbd44010bf93a0f2ca96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>stateCHANGESTO2</value>
+        <variable display_value="">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca96196a</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5e3dc27adbd44010bf93a0f2ca96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>always</value>
+        <variable display_value="">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca96196a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d23dc27adbd44010bf93a0f2ca96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN023dc27adbd44010bf93a0f2ca96192b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ce3dc27adbd44010bf93a0f2ca961929</id>
+        <name>Expanse Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>023dc27adbd44010bf93a0f2ca96192b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN023dc27adbd44010bf93a0f2ca961943,423dc27adbd44010bf93a0f2ca96192c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</model>
+        <model_id>ce3dc27adbd44010bf93a0f2ca961929</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>023dc27adbd44010bf93a0f2ca961943</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</model>
+        <model_id>ce3dc27adbd44010bf93a0f2ca961929</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>423dc27adbd44010bf93a0f2ca96192c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN523dc27adbd44010bf93a0f2ca961965,5a3dc27adbd44010bf93a0f2ca96195f,da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>2.1</order>
+        <parent_ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>523dc27adbd44010bf93a0f2ca961965</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>23a68423-1282-49e1-86d0-bc2f47187402</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=523dc27adbd44010bf93a0f2ca961965"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>523dc27adbd44010bf93a0f2ca961965</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5e3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>523dc27adbd44010bf93a0f2ca961965</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>9a3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=523dc27adbd44010bf93a0f2ca961965"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>563dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>923dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>523dc27adbd44010bf93a0f2ca961965</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1a3dc27adbd44010bf93a0f2ca961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5a3dc27adbd44010bf93a0f2ca96195f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5a3dc27adbd44010bf93a0f2ca96195f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>163dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>523dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>9a3dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5a3dc27adbd44010bf93a0f2ca96195f</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d63dc27adbd44010bf93a0f2ca961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value/>
+        <variable display_value="">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5a3dc27adbd44010bf93a0f2ca96195f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1e3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 21:07:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{Updated_1.current.opened_by.manager}}]&amp;AnyU[{{Updated_1.current.auditor}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>123dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>5a3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d23dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>963dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5a3dc27adbd44010bf93a0f2ca96195f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <order>3.1</order>
+        <parent_ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>da3dc27adbd44010bf93a0f2ca961968</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>fc8bf41d-c773-403e-9a08-1635f5b00d1f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca961968</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>163dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>da3dc27adbd44010bf93a0f2ca961968</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>d63dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>x_287611_expense_report</value>
+        <variable display_value="">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=da3dc27adbd44010bf93a0f2ca961968"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>1e3dc27adbd44010bf93a0f2ca961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>da3dc27adbd44010bf93a0f2ca961968</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>923dc27adbd44010bf93a0f2ca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN063dc27adbd44010bf93a0f2ca961959,da3dc27adbd44010bf93a0f2ca96195b"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">032d427adbd44010bf93a0f2ca9619f1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>063dc27adbd44010bf93a0f2ca961959</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>b0c9f176-1074-4ae2-a68c-f3b1f410787c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=063dc27adbd44010bf93a0f2ca961959"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>063dc27adbd44010bf93a0f2ca961959</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 21:13:17</sys_created_on>
+        <sys_id>cb169672db184010bf93a0f2ca9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 21:13:17</sys_updated_on>
+        <value> Manager's approval </value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>063dc27adbd44010bf93a0f2ca961959</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>de3dc27adbd44010bf93a0f2ca96195a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <value>{{466c37c2-7cd0-4324-a22a-b6b0a2e3d3d8.approval_state}}=approved</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">472d427adbd44010bf93a0f2ca9619f8</block>
+        <comment/>
+        <connected_to>b0c9f176-1074-4ae2-a68c-f3b1f410787c</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Expense Approval">ce3dc27adbd44010bf93a0f2ca961929</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>da3dc27adbd44010bf93a0f2ca96195b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:35:48</sys_updated_on>
+        <ui_id>58c10019-9fe3-4beb-8a66-06af87144b0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=da3dc27adbd44010bf93a0f2ca96195b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929^sys_idNOT IN423dc27adbd44010bf93a0f2ca961931,423dc27adbd44010bf93a0f2ca961948"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>423dc27adbd44010bf93a0f2ca961931</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 20:34:27</sys_created_on>
+        <sys_id>423dc27adbd44010bf93a0f2ca961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ce3dc27adbd44010bf93a0f2ca961929_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 20:34:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Expense report" max_length="40" name="x_287611_expense_report" sizeclass="2" text_index="true" type="collection">
+        <element attributes="encode_utf8=false" label="Auditor" mandatory="true" max_length="32" name="auditor" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="encode_utf8=false" label="New Reference" max_length="32" name="u_reference_1" reference="sysapproval_approver" type="reference"/>
+    </element>
+</database>

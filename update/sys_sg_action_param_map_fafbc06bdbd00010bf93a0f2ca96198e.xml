@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="New Button (Item)">b0b98ce7dbd00010bf93a0f2ca961939</button>
+        <item_parameter display_value="Item Amount">42d780a7dbd00010bf93a0f2ca9619bd</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 19:05:14</sys_created_on>
+        <sys_id>fafbc06bdbd00010bf93a0f2ca96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>42d780a7dbd00010bf93a0f2ca9619bd</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_fafbc06bdbd00010bf93a0f2ca96198e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 19:05:14</sys_updated_on>
+        <ui_parameter display_value="Amount">e47ac0e7dbd00010bf93a0f2ca961922</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

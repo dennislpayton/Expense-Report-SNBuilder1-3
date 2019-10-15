@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_segment">
+    <sys_sg_item_stream_m2m_segment action="INSERT_OR_UPDATE">
+        <item_stream display_value="Expense Report Item Stream">8aa63f57db900010bf93a0f2ca961918</item_stream>
+        <segment display_value="Item Stream Segment">d2a63f57db900010bf93a0f2ca961929</segment>
+        <sys_class_name>sys_sg_item_stream_m2m_segment</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 17:32:04</sys_created_on>
+        <sys_id>d6a63f57db900010bf93a0f2ca96192b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_segment_d6a63f57db900010bf93a0f2ca96192b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 17:32:04</sys_updated_on>
+    </sys_sg_item_stream_m2m_segment>
+</record_update>

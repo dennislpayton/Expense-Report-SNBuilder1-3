@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_screen">
+    <sys_sg_form_screen action="INSERT_OR_UPDATE">
+        <available_offline>false</available_offline>
+        <data_item/>
+        <description/>
+        <dynamic_prefetch_count/>
+        <fetch_type>not_required</fetch_type>
+        <hide_filters>false</hide_filters>
+        <icon display_value="Expense Item Icon">f08c37dbdb900010bf93a0f2ca961908</icon>
+        <item_view display_value="Expense Item Header Item View">3c8c37dbdb900010bf93a0f2ca961909</item_view>
+        <name>Expense Item</name>
+        <roles_override/>
+        <sys_class_name>sys_sg_form_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 17:57:39</sys_created_on>
+        <sys_id>f48c37dbdb900010bf93a0f2ca96190b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Expense Item</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_sg_form_screen_f48c37dbdb900010bf93a0f2ca96190b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 20:46:04</sys_updated_on>
+        <table>x_287611_expense_item</table>
+    </sys_sg_form_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=f48c37dbdb900010bf93a0f2ca96190b"/>
+</record_update>

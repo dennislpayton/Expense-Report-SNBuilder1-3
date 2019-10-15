@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>expense_type</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 18:17:33</sys_created_on>
+        <sys_data_policy display_value="Sets the Expense Type field to mandatory">a8ed6d7adb544010bf93a0f2ca96196a</sys_data_policy>
+        <sys_id>7ced6d7adb544010bf93a0f2ca96196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>expense_type</sys_name>
+        <sys_package display_value="Expense" source="x_287611_expense">811be5badb904010bf93a0f2ca961911</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense">811be5badb904010bf93a0f2ca961911</sys_scope>
+        <sys_update_name>sys_data_policy_rule_7ced6d7adb544010bf93a0f2ca96196d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 18:17:33</sys_updated_on>
+        <table>x_287611_expense_item</table>
+    </sys_data_policy_rule>
+</record_update>
